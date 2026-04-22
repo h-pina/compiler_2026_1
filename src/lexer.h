@@ -1,20 +1,20 @@
-#include <string>
+#ifndef LEXER_H
+#define LEXER_H
 
-const std::string reservedWords[] = { 
-	"class",
-	"int",
-	"string",
-	"float",
-	"if",
-	"else",
-	"do",
-	"while",
-	"repeat",
-	"until",
-	"read",
-	"write",
-	"not",
-	"or",
-	"and" 
+#include "charStream.h"
+#include "Token.h"
+
+class Lexer {
+private:
+    CharStream& m_cs;
+
+    void skip();
+    Token matchSymbols(char c);
+    Token matchTokenFromPattern(char c);
+
+public:
+    Lexer(CharStream& cs);
+    Token getNextToken();
 };
 
+#endif

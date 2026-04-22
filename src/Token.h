@@ -1,3 +1,6 @@
+#ifndef TOKEN_H
+#define TOKEN_H
+
 #include <string>
 
 enum class TokenType {
@@ -47,9 +50,12 @@ enum class TokenType {
 
 	//invalid 
 	tk_undefined,
+	tk_eof,
 };
 
 struct Token{
 	TokenType tokenType;
 	std::string lexeme;
 };
+
+#endif
