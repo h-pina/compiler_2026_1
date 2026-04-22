@@ -6,13 +6,17 @@
 
 class CharStream {
 private:
+		//dequeue allows for acess by index, which is important
+		//for multiple buffered chars
+    std::deque<int> buffered; 
     std::ifstream file;
-    std::deque<char> buffered;
+
+		int getChar();
 
 public:
     CharStream(const char* path);
 
-    int peek(size_t offset = 0);
+    int peek(size_t position = 0);
     int get();
 };
 

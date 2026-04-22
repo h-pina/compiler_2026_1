@@ -1,23 +1,25 @@
-#ifndef SYMBOLTABLE_H
-#define SYMBOLTABLE_H
+#pragma once
 
-#include <unordered_map>
 #include <string>
-#include "Token.h"
+#include <unordered_map>
+#include <vector>
 
-struct StEntry{
-		std::string lexeme;
-		TokenType tokenType;
+typedef struct st_item{
+	std::string lexeme;
+	std::string type;
+	float value;
+}st_item;
+
+class SymbolTable {
+	public:
+		SymbolTable() = default;
+		void add(std::string lexeme, std::string type, float value);
+		void update(std::string lexeme, std::string type, float value);
+		st_item get(std::string lexeme);
+		void print(); //Function used for debbuging
+		
+	private:
+		std::unordered_map<std::string,st_item> symbolTable;
+		st_item entryNotFound = {"","",-1};
+		
 };
-
-class SymbolTable{
-		private:
-				std::unordered_map<std::string, StEntry> symbolTable;
-
-		public:
-				void insert(StEntry entry);
-				void get(std::string lexeme);
-};
-
-
-#endif
