@@ -1,8 +1,6 @@
-#include "lexer.h"
+#include "Lexer.h"
 #include "Token.h"
-#include "logger.h"
-#include <cctype>
-#include <cinttypes>
+#include "Logger.h"
 #include <unordered_map>
 
 int Lexer::lineCount = 1;

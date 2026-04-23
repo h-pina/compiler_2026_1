@@ -1,4 +1,4 @@
-#include "charStream.h"
+#include "CharStream.h"
 
 CharStream::CharStream(const char* path) {
     file.open(path);

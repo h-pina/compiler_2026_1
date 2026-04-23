@@ -1,13 +1,11 @@
-
 /*
 #include <iostream>
 #include <stdexcept>
 #include <string>
 #include <utility>
 
-#include "lexer.h"
-#include "symbolTable.h"
-#include "utils.h"
+#include "Lexer.h"
+#include "SymbolTable.h"
 
 
 void SymbolTable::add(std::string lexeme, std::string type = "None", float value = 0.0){

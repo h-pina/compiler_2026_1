@@ -21,5 +21,4 @@ class SymbolTable {
 	private:
 		std::unordered_map<std::string,st_item> symbolTable;
 		st_item entryNotFound = {"","",-1};
-		
 };

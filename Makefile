@@ -7,7 +7,6 @@ TARGET = lexer
 
 all:
 	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET)
-	./lexer
 
 clean:
 	rm -f $(TARGET)

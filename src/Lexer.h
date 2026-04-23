@@ -1,9 +1,9 @@
 #ifndef LEXER_H
 #define LEXER_H
 
-#include "charStream.h"
+#include "CharStream.h"
 #include "Token.h"
-#include "logger.h"
+#include "Logger.h"
 
 class Lexer {
 private:

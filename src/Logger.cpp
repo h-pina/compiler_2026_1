@@ -1,4 +1,4 @@
-#include "logger.h"
+#include "Logger.h"
 
 Logger::Logger(LogLevel level, LogType type, bool enabled) : level(level), type(type), enabled(enabled) {}
 
